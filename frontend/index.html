@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Игра Kahoot</h1>
+        <div id="question-container">
+            <h2 id="question">Какой цвет небо?</h2>
+            <div id="answers">
+                <button class="answer" onclick="submitAnswer(0)">Красный</button>
+                <button class="answer" onclick="submitAnswer(1)">Синий</button>
+                <button class="answer" onclick="submitAnswer(2)">Зелёный</button>
+                <button class="answer" onclick="submitAnswer(3)">Чёрный</button>
+            </div>
+        </div>
+        <div id="score-container">
+            <p id="score">Очки: 0</p>
+        </div>
+        <button id="next-button" onclick="nextQuestion()">Следующий вопрос</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
