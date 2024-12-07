@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"kahoot-clone/backend/game"
+	"gitKahoot/backend/game"
+	"gitKahoot/backend/questions"
+	"gitKahoot/backend/scores"
 	"log"
 	"net/http"
-	"questions"
-	"scores"
 )
 
 func main() {

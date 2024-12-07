@@ -1,3 +1,3 @@
-module kahoot-clone
+module gitKahoot
 
 go 1.19
