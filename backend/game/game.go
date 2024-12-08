@@ -3,9 +3,9 @@ package game
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"gitKahoot/backend/questions"
 	"gitKahoot/backend/scores"
+	"net/http"
 	"strconv"
 	"sync"
 )
