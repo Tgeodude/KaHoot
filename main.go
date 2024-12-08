@@ -10,7 +10,11 @@ import (
 )
 
 func main() {
-	// Инициализация маршрутов
+	// Обслуживание статических файлов (фронтенд)
+	fs := http.FileServer(http.Dir("./frontend"))
+	http.Handle("/", fs)
+
+	// Инициализация маршрутов API
 	http.HandleFunc("/start", game.StartGame)
 	http.HandleFunc("/question", game.GetQuestion)
 	http.HandleFunc("/submit", game.SubmitAnswer)

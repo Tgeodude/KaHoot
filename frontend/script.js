@@ -1,51 +1,57 @@
 let currentQuestionIndex = 0;
 let score = 0;
-let playerName = prompt("Введите ваше имя");
-
 const questionContainer = document.getElementById("question");
 const answersContainer = document.getElementById("answers");
 const scoreContainer = document.getElementById("score");
 
+// Функция для получения вопроса
 function getQuestion() {
     fetch(`http://localhost:8080/question?index=${currentQuestionIndex}`)
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
+            // Обновление интерфейса вопросом и ответами
             questionContainer.innerText = data.question;
-            answersContainer.innerHTML = '';
+            answersContainer.innerHTML = ""; // Очищаем ответы
             data.answers.forEach((answer, index) => {
                 const button = document.createElement("button");
                 button.innerText = answer;
                 button.onclick = () => submitAnswer(index);
                 answersContainer.appendChild(button);
             });
+        })
+        .catch((error) => {
+            console.error("Ошибка при получении вопроса:", error);
         });
 }
 
-function submitAnswer(answer) {
+// Функция для отправки ответа
+function submitAnswer(answerIndex) {
     fetch("http://localhost:8080/submit", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            player_name: playerName,
-            answer: answer
-        })
+            player_name: "Player1",
+            question_id: currentQuestionIndex,
+            answer: answerIndex,
+        }),
     })
-    .then(response => response.json())
-    .then(data => {
-        score = data.score;
-        scoreContainer.innerText = `Очки: ${score}`;
-    });
+        .then((response) => response.json())
+        .then((data) => {
+            score = data.score;
+            scoreContainer.innerText = `Score: ${score}`;
+        })
+        .catch((error) => {
+            console.error("Ошибка при отправке ответа:", error);
+        });
 }
 
+// Функция для перехода к следующему вопросу
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex >= 5) {
-        alert("Игра завершена!");
-    } else {
-        getQuestion();
-    }
+    getQuestion();
 }
 
-window.onload = getQuestion;
+// Загрузка первого вопроса при открытии страницы
+getQuestion();
