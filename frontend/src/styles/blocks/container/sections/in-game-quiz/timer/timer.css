@@ -1,0 +1,14 @@
+/* Таймер */
+
+@import url('progress/progress.css');
+@import url('progress-bar/progress-bar.css');
+
+.timer {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 150px;
+  margin-block-end: 16px;
+}

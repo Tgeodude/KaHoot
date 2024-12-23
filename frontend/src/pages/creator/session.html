@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
+
+  <title>KaPoot?</title>
+
+  <link rel="stylesheet" href="../../styles/index.css">
+</head>
+
+<body class="container">
+  <header class="header">
+    <h1 class="page-title">kapoot?</h1>
+  </header>
+  <form id="formQuestionAndAnswers" class="form-creator">
+    <div class="creator-field">
+      <label class="creator-field__label" for="question">Введите вопрос</label>
+      <input class="creator-field__input" type="text" id="question" name="question">
+    </div>
+    <div class="creator-field">
+      <label class="creator-field__label">Введите<br>ответы</label>
+      <ul class="creator-field-list">
+        <li class="creator-field-list__item">
+          <input class="creator-field-list__input bg-red" type="text" id="answer" name="answer">
+          <button type="button" class="creator-field-list__checkbox">
+            <span class="creator-field-list__icon selected">✓</span>
+          </button>
+        </li>
+        <li class="creator-field-list__item">
+          <input class="creator-field-list__input bg-blue" type="text" id="answer" name="answer">
+          <button type="button" class="creator-field-list__checkbox">
+            <span class="creator-field-list__icon">×</span>
+          </button>
+        </li>
+        <li class="creator-field-list__item">
+          <input class="creator-field-list__input bg-green" type="text" id="answer" name="answer">
+          <button type="button" class="creator-field-list__checkbox">
+            <span class="creator-field-list__icon">×</span>
+          </button>
+        </li>
+        <!-- <li class="creator-field-list__item">
+          <input class="creator-field-list__input bg-yellow" type="text" id="answer" name="answer">
+          <button type="button" class="creator-field-list__checkbox">
+            <span class="creator-field-list__icon">×</span>
+          </button>
+        </li> -->
+      </ul>
+      <button type="button" class="add-answer-btn">
+        <div class="add-answer-btn__border"><span class="add-answer-btn__icon">+</span></div>
+        <span>Добавить ответ</span>
+      </button>
+    </div>
+    <div class="creator-field">
+      <label class="creator-field__label">Вопросы</label>
+      <div class="creator-field-questions">
+        <ul class="creator-field-questions-list">
+          <li class="creator-field-questions-list__item">
+            <span class="creator-field-questions-list__text">Первый вопрос</span>
+            <button type="button" class="remove-question-btn">
+              <div class="remove-question-btn__border"><span class="remove-question-btn__icon">-</span></div>
+            </button>
+          </li>
+          <li class="creator-field-questions-list__item">
+            <span class="creator-field-questions-list__text">Очень длинный второй вопрос, ну прям ооооооочень длинный</span>
+            <button type="button" class="remove-question-btn">
+              <div class="remove-question-btn__border"><span class="remove-question-btn__icon">-</span></div>
+            </button>
+          </li>
+        </ul>
+        <button type="button" class="add-question-btn">
+          <div class="add-questiion-btn__border"><span class="add-question-btn__icon">+</span></div>
+          <span>Добавить вопрос</span>
+        </button>
+      </div>
+      </div>
+    </div>
+  </form>
+  <footer class="quiz-footer">
+    <button form="formQuestionAndAnswers" type="submit" class="button rainbow-btn">Начать</button>
+    <button class="button">Назад</button>
+  </footer>
+</main>
+</body>
+</html>
