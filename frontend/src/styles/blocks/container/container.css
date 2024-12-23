@@ -1,0 +1,32 @@
+/* Разные фирменные цвета у кнопок и полей ввода */
+@import url('bg-border-colors.css');
+
+/* Скролл-бар */
+@import url('scroll-bar/scroll-bar.css');
+
+/* Шапка */
+@import url('header/header.css');
+
+/* Футер */
+@import url('footer/quiz-footer.css');
+
+/* Кнопки */
+@import url('buttons/buttons.css');
+
+/* Секции */
+@import url('sections/sections.css');
+
+/* Контейнер */
+.container {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  width: 100%;
+  max-inline-size: 756px;
+  color: var(--text-color, #000);
+  font-family: var(--main-font-family), "Inter", sans-serif;
+  background-color: var(--main-bg-color, #fff);
+  scrollbar-color: #000;
+}

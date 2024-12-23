@@ -1,0 +1,34 @@
+.form-player {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin-block-start: 80px;
+}
+
+.player-field {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.player-field__label {
+  font-size: 40px;
+  line-height: 82.3%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.player-field__input {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--text-color, #000);
+  text-align: center;
+}
+
+.player-field__input:focus {
+  border-bottom: 2px dashed var(--text-color, #000);
+}
