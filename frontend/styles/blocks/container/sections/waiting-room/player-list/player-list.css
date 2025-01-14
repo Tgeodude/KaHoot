@@ -1,0 +1,43 @@
+.player-list {
+  inline-size: 756px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+  overflow-x: auto;
+}
+
+.player-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.player-list__avatar {
+  inline-size: 160px;
+  block-size: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.player-list__image {
+  inline-size: 100px;
+  block-size: 100px;
+  aspect-ratio: 1 / 1;
+}
+
+.player-list__nickname {
+  font-weight: 600;
+  font-size: 2rem;
+  inline-size: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  margin-block-end: 20px;
+}
