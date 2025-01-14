@@ -1,0 +1,49 @@
+.player-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.player-list__avatar {
+  inline-size: 160px;
+  block-size: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.player-list__image {
+  inline-size: 100px;
+  block-size: 100px;
+  aspect-ratio: 1 / 1;
+}
+
+.player-list__nickname {
+  font-weight: 600;
+  font-size: 2rem;
+  inline-size: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+.border-red {
+  border: 8px solid var(--color-red, #ff5252);
+}
+
+.border-blue {
+  border: 8px dashed var(--color-blue, #acf1fd);
+}
+
+.border-yellow {
+  border: 8px solid var(--color-yellow, #fff952);
+}
+
+.border-green {
+  border: 8px dashed var(--color-green, #eafdac);
+}

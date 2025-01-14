@@ -1,0 +1,11 @@
+/* Шрифт */
+@import url('../../styles/vendor/fonts/fonts.css');
+
+/* Глобальные правила */
+@import url('../../styles/globals.css');
+
+/* Переменные */
+@import url('../../styles/variables.css');
+
+/* Основной контейнер со всеми секциями */
+@import url('../../styles/blocks/container/container.css');

@@ -1,0 +1,58 @@
+/* Ответы на квиз в игровой сессии */
+
+.answer-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+
+.answer-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 370px;
+  height: 134px;
+  border-radius: 20px;
+  padding: 52px 36px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.answer-list__text {
+  display: flex;
+  overflow: hidden;
+  line-height: 82.3%;
+  text-overflow: ellipsis;
+  inline-size: 224px;
+  block-size: 78px;
+}
+
+.answer-list__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--text-color, #000);
+  border-radius: 50%;
+  font-weight: 200;
+  line-height: 0%;
+  inline-size: 54px;
+  block-size: 54px;
+}
+
+.answer-list__item .answer-list__icon {
+  opacity: 0;
+}
+
+.answer-list__item.selected .answer-list__icon {
+  opacity: 1;
+}
+
+.text-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: center;
+}

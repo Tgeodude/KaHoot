@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 82.3%;
+}
+
+.header-button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
