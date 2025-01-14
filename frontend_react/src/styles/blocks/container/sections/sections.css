@@ -1,0 +1,14 @@
+/* Первая страница - выбор ролей */
+@import url('roles-first-page/role-choose.css');
+
+/* Страница сессии (для креатора - создание квиза / для игрока - ввод данных) */
+@import url('session/session.css');
+
+/* Комната ожидания */
+@import url('waiting-room/player-section.css');
+
+/* Страница игры */
+@import url('in-game-quiz/quiz.css');
+
+/* Финальная страница (таблица лидеров) */
+@import url('final_page/leader-list.css');

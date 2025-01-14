@@ -1,0 +1,37 @@
+/* Номер комнаты */
+@import url('room-number/room-number.css');
+
+/* Игроки */
+@import url('player-list/player-list.css');
+
+/* Секция игроков в комнате ожидания */
+.player-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Правило ожидания в лобби */
+.players-wait-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 82.3%;
+  text-align: center;
+  margin-block-end: 65px;
+}
+
+/* Правило ожидания на экране игрока */
+h2.players-wait-rule {
+  block-size: 105px;
+  margin-block-start: 110px;
+  margin-block-end: 190px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+/* Правило ожидания на экране создателя */
+h3.players-wait-rule {
+  block-size: 80px;
+  font-weight: 400;
+  font-size: 2rem;
+}
