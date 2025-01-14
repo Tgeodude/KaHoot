@@ -11,7 +11,7 @@ import (
 
 func main() {
 	// Обслуживание статических файлов (фронтенд)
-	fs := http.FileServer(http.Dir("./frontend_react"))
+	fs := http.FileServer(http.Dir("./frontend"))
 	http.Handle("/", fs)
 
 	// Инициализация маршрутов API
