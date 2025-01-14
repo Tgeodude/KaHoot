@@ -1,0 +1,38 @@
+/* Радужная кнопка */
+.rainbow-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.rainbow-btn::before,
+.rainbow-btn::after {
+  content: '';
+  position: absolute;
+  inset: -0.25rem;
+  z-index: -1;
+  border-radius: inherit;
+  background-size: 600%;
+  background: linear-gradient(90deg,
+    var(--color-red, #ff5252),
+    var(--color-blue, #acf1fd),
+    var(--color-yellow, #fff952),
+    var(--color-red, #ff5252)
+  );
+  animation: rainbow 30s linear infinite;
+}
+
+.rainbow-btn::after {
+  opacity: 0.7;
+  filter: blur(1.5rem);
+}
+
+.rainbow-btn:hover {
+  background: none;
+}
+
+@keyframes rainbow {
+  to { background-position: 40vw; }
+}
