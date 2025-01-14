@@ -1,0 +1,49 @@
+/* Таблица лидеров */
+.leader-list {
+  display: grid;
+  gap: 48px;
+}
+
+.leader-list__place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px dashed var(--color-green, #eafdac);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 40px;
+  inline-size: 90px;
+  block-size: 90px;
+}
+
+.leader-list__place.first-place {
+  border: none;
+  background-color: var(--color-yellow, #fff952);
+}
+
+.leader-list__place.second-place {
+  border: 16px dashed var(--color-blue, #acf1fd);
+}
+
+.leader-list__place.third-place {
+  border: 4px solid var(--color-red, #ff5252);
+}
+
+.leader-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.leader-list__text {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.leader-list__name {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  inline-size: 170px;
+  white-space: nowrap;
+}

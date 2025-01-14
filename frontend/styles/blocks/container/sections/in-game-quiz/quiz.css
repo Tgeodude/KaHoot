@@ -1,0 +1,16 @@
+/* Таймер для вопроса на экране игрока */
+@import url('timer/timer.css');
+
+/* Бар-чарт после вопроса (статистика) на экране создателя */
+@import url('bar-chart/bar-chart.css');
+
+/* Вопрос */
+@import url('question/question.css');
+
+/* Ответы */
+@import url('answer-list/answer-list.css');
+
+/* Квиз */
+.quiz {
+  width: 100%;
+}
